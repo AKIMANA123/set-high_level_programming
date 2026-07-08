@@ -1,4 +1,4 @@
 #!/usr/bin/python3
-str1 = "Elmwood"
-str2 = "Institute"
-print("Welcome to {} {}!".format(str1, str2))
+str1 = "SE"
+str2 = "T"
+print(f"Welcome to {str1}{str2}!")
