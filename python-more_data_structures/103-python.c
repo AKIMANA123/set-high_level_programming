@@ -64,7 +64,7 @@ printf("[*] Allocated = %ld\n", allocated);
 for (i = 0; i < size; i++)
 {
 item = ((PyListObject *)p)->ob_item[i];
-printf("Element %ld: %s\n", i, Py_TYPE(item)->tp_name);
+printf("Element %ld: %s\n", i, ((PyObject *)item)->ob_type->tp_name);
 if (PyBytes_Check(item))
 print_python_bytes(item);
 }
