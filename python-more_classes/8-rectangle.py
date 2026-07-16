@@ -5,7 +5,9 @@ print_symbol, and comparison
 
 
 class Rectangle:
-    """Defines a rectangle with instance counting, custom symbol, and comparison"""
+    """Defines a rectangle with instance counting, custom symbol,
+    and comparison
+    """
 
     number_of_instances = 0
     print_symbol = "#"
