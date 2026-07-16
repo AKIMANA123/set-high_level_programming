@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Square class with private size attribute, getter, setter, area, and print methods"""
+"""Square class with private size, getter, setter, area, and print"""
 
 
 class Square:
