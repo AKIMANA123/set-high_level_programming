@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Rectangle class with width, height, area, perimeter, repr, del, count,
-print_symbol, and comparison"""
+print_symbol, and comparison
+"""
 
 
 class Rectangle:
