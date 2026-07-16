@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Rectangle class with width, height, area, perimeter, and string representation"""
+"""Rectangle class with width, height, area, perimeter, and str method"""
 
 
 class Rectangle:
@@ -73,7 +73,7 @@ class Rectangle:
         return 2 * (self.__width + self.__height)
 
     def __str__(self):
-        """Return a string representation of the rectangle using '#' characters
+        """Return a string representation of the rectangle using '#'
 
         Returns:
             A string of the rectangle drawn with '#'
@@ -85,11 +85,3 @@ class Rectangle:
         for _ in range(self.__height):
             result.append("#" * self.__width)
         return "\n".join(result)
-
-    def __repr__(self):
-        """Return a string representation of the rectangle for recreation
-
-        Returns:
-            A string that can be used to recreate the rectangle
-        """
-        return "Rectangle({}, {})".format(self.__width, self.__height)
