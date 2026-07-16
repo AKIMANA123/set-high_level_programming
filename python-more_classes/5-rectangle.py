@@ -3,7 +3,7 @@
 
 
 class Rectangle:
-    """Defines a rectangle with area, perimeter, representation, and destructor"""
+    """Defines a rectangle with area, perimeter, repr, and destructor"""
 
     def __init__(self, width=0, height=0):
         """Initialize the rectangle with width and height
