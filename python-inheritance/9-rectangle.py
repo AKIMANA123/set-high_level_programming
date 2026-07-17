@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Rectangle class with __str__ method"""
+"""Rectangle class with area and string representation"""
 
 
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
