@@ -1,1 +1,5 @@
-This module contains the MyList class for testing.
+Test cases for MyList class:
+- Create MyList instance
+- Append values
+- Call print_sorted() method
+- Verify original list remains unchanged
