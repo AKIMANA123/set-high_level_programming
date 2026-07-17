@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Square class with __str__ method"""
+"""Square class with custom string representation"""
 
 
 Rectangle = __import__('9-rectangle').Rectangle
