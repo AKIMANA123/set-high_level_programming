@@ -1,0 +1,4 @@
+Test cases for BaseGeometry.integer_validator:
+- Valid integer > 0: passes
+- Non-integer: TypeError
+- Integer <= 0: ValueError
