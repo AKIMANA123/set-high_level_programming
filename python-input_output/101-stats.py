@@ -2,7 +2,6 @@
 """Script to compute metrics from stdin"""
 
 import sys
-import signal
 
 
 def print_stats(total_size, status_counts):
@@ -27,19 +26,19 @@ def main():
             line_count += 1
             parts = line.split()
 
+            # Try to extract status code and file size
             try:
-                # Extract status code and file size
-                status_code = int(parts[-2])
-                file_size = int(parts[-1])
+                if len(parts) >= 2:
+                    file_size = int(parts[-1])
+                    total_size += file_size
 
-                if status_code in status_counts:
-                    status_counts[status_code] += 1
-
-                total_size += file_size
+                    status_code = int(parts[-2])
+                    if status_code in status_counts:
+                        status_counts[status_code] += 1
 
             except (IndexError, ValueError):
-                # Skip malformed lines
-                continue
+                # Skip malformed lines for status counting
+                pass
 
             if line_count % 10 == 0:
                 print_stats(total_size, status_counts)
