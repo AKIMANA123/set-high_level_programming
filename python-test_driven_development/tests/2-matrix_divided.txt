@@ -42,3 +42,9 @@ Test division by zero:
 Traceback (most recent call last):
 ...
 ZeroDivisionError: division by zero
+
+Test with div = infinity:
+>>> matrix_divided([[1, 2], [3, 4]], float('inf'))
+[[0.0, 0.0], [0.0, 0.0]]
+>>> matrix_divided([[1.5, 2.5], [3.5, 4.5]], float('inf'))
+[[0.0, 0.0], [0.0, 0.0]]
