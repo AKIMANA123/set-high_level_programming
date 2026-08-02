@@ -31,3 +31,9 @@ Test with negative size:
 Traceback (most recent call last):
 ...
 ValueError: size must be >= 0
+
+Test with missing argument:
+>>> print_square()
+Traceback (most recent call last):
+...
+TypeError: print_square() missing 1 required positional argument: 'size'
