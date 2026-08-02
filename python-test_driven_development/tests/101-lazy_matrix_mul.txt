@@ -3,8 +3,6 @@
 Test with valid matrices:
 >>> lazy_matrix_mul([[1, 2], [3, 4]], [[5, 6], [7, 8]])
 [[19, 22], [43, 50]]
-
-Test with 2x2 and 2x3 matrices:
 >>> lazy_matrix_mul([[1, 2], [3, 4]], [[1, 2, 3], [4, 5, 6]])
 [[9, 12, 15], [19, 26, 33]]
 
