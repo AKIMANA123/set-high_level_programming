@@ -1,0 +1,34 @@
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Test with simple text:
+>>> text_indentation("Hello. World")
+Hello.
+World
+
+Test with question mark:
+>>> text_indentation("How are you? I am fine")
+How are you?
+I am fine
+
+Test with colon:
+>>> text_indentation("Note: important")
+Note:
+important
+
+Test with multiple punctuation:
+>>> text_indentation("One. Two? Three: Four")
+One.
+Two?
+Three:
+Four
+
+Test with spaces after punctuation:
+>>> text_indentation("Hello.  World")
+Hello.
+World
+
+Test with invalid type:
+>>> text_indentation(123)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
