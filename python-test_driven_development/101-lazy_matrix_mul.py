@@ -14,18 +14,20 @@ def lazy_matrix_mul(m_a, m_b):
     Returns:
         New matrix as a numpy array
     """
-    # Check for ragged rows (to avoid "Object arrays are not currently supported")
+    # Check for ragged rows (to avoid object arrays)
     if isinstance(m_a, list) and m_a:
         row_length_a = len(m_a[0])
         for row in m_a:
             if len(row) != row_length_a:
-                raise ValueError("setting an array element with a sequence.")
+                raise ValueError(
+                    "setting an array element with a sequence.")
 
     if isinstance(m_b, list) and m_b:
         row_length_b = len(m_b[0])
         for row in m_b:
             if len(row) != row_length_b:
-                raise ValueError("setting an array element with a sequence.")
+                raise ValueError(
+                    "setting an array element with a sequence.")
 
     # Let NumPy handle everything else
     arr_a = np.array(m_a)
