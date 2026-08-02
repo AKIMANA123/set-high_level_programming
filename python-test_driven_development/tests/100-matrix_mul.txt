@@ -6,6 +6,10 @@ Test with valid matrices:
 >>> matrix_mul([[1, 2]], [[3, 4], [5, 6]])
 [[13, 16]]
 
+Test with 2x2 and 2x3 matrices (valid multiplication):
+>>> matrix_mul([[1, 2], [3, 4]], [[1, 2, 3], [4, 5, 6]])
+[[9, 12, 15], [19, 26, 33]]
+
 Test with 3x3 matrices:
 >>> matrix_mul([[1, 2, 3], [4, 5, 6]], [[7, 8], [9, 10], [11, 12]])
 [[58, 64], [139, 154]]
@@ -78,8 +82,8 @@ Traceback (most recent call last):
 ...
 TypeError: each row of m_b must be of the same size
 
-Test matrices can't be multiplied:
->>> matrix_mul([[1, 2], [3, 4]], [[1, 2, 3], [4, 5, 6]])
+Test matrices can't be multiplied (2x3 and 2x2 - columns of m_a != rows of m_b):
+>>> matrix_mul([[1, 2, 3], [4, 5, 6]], [[1, 2], [3, 4]])
 Traceback (most recent call last):
 ...
 ValueError: m_a and m_b can't be multiplied
