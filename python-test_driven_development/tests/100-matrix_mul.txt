@@ -87,3 +87,15 @@ Test matrices can't be multiplied (2x3 and 2x2 - columns of m_a != rows of m_b):
 Traceback (most recent call last):
 ...
 ValueError: m_a and m_b can't be multiplied
+
+Test with missing one argument:
+>>> matrix_mul([[1, 2], [3, 4]])
+Traceback (most recent call last):
+...
+TypeError: matrix_mul() missing 1 required positional argument: 'm_b'
+
+Test with missing two arguments:
+>>> matrix_mul()
+Traceback (most recent call last):
+...
+TypeError: matrix_mul() missing 2 required positional arguments: 'm_a' and 'm_b'
