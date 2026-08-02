@@ -45,3 +45,17 @@ ValueError: cannot convert float NaN to integer
 Traceback (most recent call last):
 ...
 ValueError: cannot convert float NaN to integer
+
+Test with float overflow:
+>>> add_integer(float('inf'), 5)
+Traceback (most recent call last):
+...
+OverflowError: cannot convert float infinity to integer
+>>> add_integer(1, float('inf'))
+Traceback (most recent call last):
+...
+OverflowError: cannot convert float infinity to integer
+>>> add_integer(float('-inf'), 5)
+Traceback (most recent call last):
+...
+OverflowError: cannot convert float infinity to integer
