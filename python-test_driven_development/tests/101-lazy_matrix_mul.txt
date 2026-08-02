@@ -1,13 +1,15 @@
 >>> lazy_matrix_mul = __import__('101-lazy_matrix_mul').lazy_matrix_mul
 
 Test with valid matrices:
->>> lazy_matrix_mul([[1, 2], [3, 4]], [[5, 6], [7, 8]])
-[[19, 22], [43, 50]]
->>> lazy_matrix_mul([[1, 2], [3, 4]], [[1, 2, 3], [4, 5, 6]])
-[[9, 12, 15], [19, 26, 33]]
+>>> print(lazy_matrix_mul([[1, 2], [3, 4]], [[5, 6], [7, 8]]))
+[[19 22]
+ [43 50]]
+>>> print(lazy_matrix_mul([[1, 2], [3, 4]], [[1, 2, 3], [4, 5, 6]]))
+[[ 9 12 15]
+ [19 26 33]]
 
 Test with floats:
->>> lazy_matrix_mul([[1.5, 2.5]], [[3.5], [4.5]])
+>>> print(lazy_matrix_mul([[1.5, 2.5]], [[3.5], [4.5]]))
 [[16.5]]
 
 Test m_a not a list:
