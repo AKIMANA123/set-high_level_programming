@@ -18,8 +18,8 @@ class State(Base):
 
     # Relationship with City class
     # - backref="state" creates a 'state' attribute in City objects
-    # - cascade="all, delete-orphan" ensures cities are deleted when state is
-    #   deleted
+    # - cascade="all, delete-orphan" ensures cities are deleted
+    #   when state is deleted
     cities = relationship(
         "City",
         backref="state",
