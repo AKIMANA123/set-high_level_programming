@@ -21,11 +21,11 @@ if __name__ == "__main__":
 
     cursor = db.cursor()
 
-    # Use format to create the SQL query with user input
+    # Use BINARY for case-sensitive comparison
     cursor.execute(
-        "SELECT * FROM states WHERE name = '{}' ORDER BY id ASC".format(
-            state_name
-        )
+        "SELECT * FROM states WHERE BINARY name = %s "
+        "ORDER BY id ASC",
+        (state_name,)
     )
 
     rows = cursor.fetchall()
