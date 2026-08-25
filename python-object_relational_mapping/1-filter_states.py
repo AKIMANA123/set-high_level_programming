@@ -21,7 +21,10 @@ if __name__ == "__main__":
     cursor = db.cursor()
 
     # Case-sensitive comparison using BINARY
-    cursor.execute("SELECT * FROM states WHERE BINARY LEFT(name, 1) = 'N' ORDER BY id ASC")
+    cursor.execute(
+        "SELECT * FROM states WHERE BINARY LEFT(name, 1) = 'N' "
+        "ORDER BY id ASC"
+    )
 
     rows = cursor.fetchall()
 
