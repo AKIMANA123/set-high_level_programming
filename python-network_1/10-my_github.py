@@ -1,14 +1,19 @@
 #!/usr/bin/python3
-"""Uses the GitHub API to display the user ID using Basic Authentication."""
-import sys
+"""Takes GitHub credentials and uses API to display user id"""
+
 import requests
+import sys
+
 
 if __name__ == "__main__":
     username = sys.argv[1]
-    password = sys.argv[2]
-    url = "https://api.github.com/user"
-    r = requests.get(url, auth=(username, password))
-    try:
-        print(r.json().get("id"))
-    except Exception:
-        print("None")
+    token = sys.argv[2]
+
+    url = 'https://api.github.com/user'
+    response = requests.get(url, auth=(username, token))
+
+    if response.status_code == 200:
+        user_data = response.json()
+        print(user_data.get('id'))
+    else:
+        print(None)
