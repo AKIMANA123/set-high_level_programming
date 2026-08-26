@@ -1,12 +1,15 @@
 #!/usr/bin/python3
-"""Sends a request to a URL and displays error codes >= 400 using requests."""
-import sys
+"""Sends a request to URL and displays body or error code using requests"""
+
 import requests
+import sys
+
 
 if __name__ == "__main__":
     url = sys.argv[1]
-    r = requests.get(url)
-    if r.status_code >= 400:
-        print("Error code: {}".format(r.status_code))
+    response = requests.get(url)
+
+    if response.status_code >= 400:
+        print("Error code: {}".format(response.status_code))
     else:
-        print(r.text)
+        print(response.text)
